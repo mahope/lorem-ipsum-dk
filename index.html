@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Lorem Ipsum Generator | Dansk Fyldtekst til Design</title>
+    <meta name="title" content="Lorem Ipsum Generator | Dansk Fyldtekst til Design">
+    <meta name="description" content="Generer Lorem Ipsum fyldtekst gratis. Vælg mellem klassisk latin, dansk tekst eller sjove varianter. Perfekt til webdesign, mockups og prototyper.">
+    <meta name="keywords" content="lorem ipsum, fyldtekst, placeholder tekst, dansk lorem ipsum, dummy text, design tekst">
+    <meta name="author" content="Mahope.dk">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://lorem.holstjensen.eu">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lorem.holstjensen.eu">
+    <meta property="og:title" content="Lorem Ipsum Generator | Dansk Fyldtekst">
+    <meta property="og:description" content="Generer fyldtekst til design og prototyper. Klassisk latin eller dansk tekst.">
+    <meta property="og:locale" content="da_DK">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Lorem Ipsum Generator",
+      "url": "https://lorem.holstjensen.eu",
+      "description": "Gratis Lorem Ipsum generator med dansk og klassisk tekst",
+      "applicationCategory": "DesignApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "DKK" }
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg: #0c0c0c;
+            --surface: #1a1a1a;
+            --border: #333;
+            --text: #e5e5e5;
+            --muted: #888;
+            --accent: #10b981;
+            --accent-hover: #34d399;
+            --radius: 12px;
+        }
+
+        [data-theme="light"] {
+            --bg: #fafafa;
+            --surface: #ffffff;
+            --border: #e5e5e5;
+            --text: #171717;
+            --muted: #737373;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            color: var(--muted);
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+
+        .controls {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .control-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .control-group {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .control-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-family: system-ui, sans-serif;
+            font-size: 0.875rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        select, input[type="number"] {
+            width: 100%;
+            padding: 0.75rem;
+            font-size: 1rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--bg);
+            color: var(--text);
+            font-family: system-ui, sans-serif;
+        }
+
+        select:focus, input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .checkbox-group {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            font-family: system-ui, sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--accent);
+        }
+
+        .btn-row {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        button {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: system-ui, sans-serif;
+            font-weight: 500;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+            flex: 1;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: var(--surface);
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent);
+        }
+
+        .output-section {
+            position: relative;
+        }
+
+        .output-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .output-header h2 {
+            font-weight: 400;
+            font-size: 1.25rem;
+        }
+
+        .stats {
+            font-family: system-ui, sans-serif;
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .output {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+            min-height: 300px;
+            white-space: pre-wrap;
+            font-size: 1.1rem;
+        }
+
+        .output p {
+            margin-bottom: 1.5rem;
+            text-indent: 2em;
+        }
+
+        .output p:last-child {
+            margin-bottom: 0;
+        }
+
+        .output h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .output ul, .output ol {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .output li {
+            margin-bottom: 0.5rem;
+        }
+
+        .copy-notification {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--accent);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-family: system-ui, sans-serif;
+            font-weight: 500;
+            transition: transform 0.3s;
+            z-index: 100;
+        }
+
+        .copy-notification.show {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.5rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.25rem;
+        }
+
+        .seo-content {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .seo-content h2 {
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        .seo-content p {
+            color: var(--muted);
+            margin-bottom: 1rem;
+        }
+
+        .text-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .text-type {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 1.25rem;
+            border-radius: var(--radius);
+        }
+
+        .text-type h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            font-family: system-ui, sans-serif;
+        }
+
+        .text-type p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--muted);
+            font-family: system-ui, sans-serif;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.75rem; }
+            .output { padding: 1.25rem; font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle" aria-label="Skift tema">🌙</button>
+
+    <div class="container">
+        <header>
+            <h1>📝 Lorem Ipsum Generator</h1>
+            <p class="subtitle">Fyldtekst til design, mockups og prototyper</p>
+        </header>
+
+        <div class="controls">
+            <div class="control-row">
+                <div class="control-group">
+                    <label for="textType">Tekst Type</label>
+                    <select id="textType">
+                        <option value="lorem">Klassisk Lorem Ipsum</option>
+                        <option value="danish">Dansk Fyldtekst</option>
+                        <option value="hipster">Hipster Ipsum</option>
+                        <option value="bacon">Bacon Ipsum</option>
+                        <option value="cat">Kat Ipsum</option>
+                        <option value="corporate">Forretningssprog</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="unitType">Enhed</label>
+                    <select id="unitType">
+                        <option value="paragraphs">Afsnit</option>
+                        <option value="sentences">Sætninger</option>
+                        <option value="words">Ord</option>
+                        <option value="lists">Lister</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="amount">Antal</label>
+                    <input type="number" id="amount" value="3" min="1" max="50">
+                </div>
+            </div>
+            
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox" id="startLorem" checked>
+                    Start med "Lorem ipsum..."
+                </label>
+                <label>
+                    <input type="checkbox" id="includeHeadings">
+                    Inkluder overskrifter
+                </label>
+            </div>
+
+            <div class="btn-row">
+                <button class="btn-primary" id="generateBtn">✨ Generer Tekst</button>
+                <button class="btn-secondary" id="copyBtn">📋 Kopiér</button>
+            </div>
+        </div>
+
+        <div class="output-section">
+            <div class="output-header">
+                <h2>Genereret Tekst</h2>
+                <span class="stats" id="stats">0 ord · 0 tegn</span>
+            </div>
+            <div class="output" id="output"></div>
+        </div>
+
+        <section class="seo-content">
+            <h2>Om Lorem Ipsum</h2>
+            <p>
+                Lorem Ipsum er en standard fyldtekst, der har været brugt i tryksager siden 1500-tallet. 
+                Teksten stammer fra "De finibus bonorum et malorum" af Cicero, skrevet i år 45 f.Kr. 
+                Selvom ordene ikke giver mening på moderne latin, ligner de rigtigt sprog og gør det 
+                muligt at fokusere på design frem for indhold.
+            </p>
+            
+            <div class="text-types">
+                <div class="text-type">
+                    <h3>🏛️ Klassisk Latin</h3>
+                    <p>Den originale Lorem Ipsum tekst baseret på Ciceros filosofiske værk.</p>
+                </div>
+                <div class="text-type">
+                    <h3>🇩🇰 Dansk Fyldtekst</h3>
+                    <p>Tilfældige danske sætninger til lokaliserede designs.</p>
+                </div>
+                <div class="text-type">
+                    <h3>🥓 Bacon Ipsum</h3>
+                    <p>Lækker fyldtekst fyldt med kødprodukter.</p>
+                </div>
+                <div class="text-type">
+                    <h3>🐱 Kat Ipsum</h3>
+                    <p>Sjov tekst inspireret af katteadfærd.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Lavet med ❤️ af <a href="https://mahope.dk">Mahope</a></p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+                Se også: 
+                <a href="https://farver.holstjensen.eu">Farve Palette</a> · 
+                <a href="https://qr.holstjensen.eu">QR Generator</a> · 
+                <a href="https://enheder.holstjensen.eu">Enheder</a> ·
+                <a href="https://timer.holstjensen.eu">Timer</a>
+            </p>
+        </footer>
+    </div>
+
+    <div class="copy-notification" id="copyNotification">✓ Kopieret til udklipsholder!</div>
+
+    <script>
+        // Text databases
+        const texts = {
+            lorem: [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                "Curabitur pretium tincidunt lacus nulla et sollicitudin.",
+                "Proin gravida hendrerit lectus a molestie cursus metus.",
+                "Integer nec odio praesent libero sed cursus ante dapibus diam.",
+                "Nulla quis sem at nibh elementum imperdiet duis sagittis ipsum.",
+                "Praesent mauris fusce nec tellus sed augue semper porta.",
+                "Mauris massa vestibulum lacinia arcu eget nulla.",
+                "Class aptent taciti sociosqu ad litora torquent per conubia nostra.",
+                "Curabitur sodales ligula in libero sed dignissim lacinia nunc.",
+                "Curabitur tortor pellentesque nibh aenean quam in scelerisque sem.",
+                "Suspendisse potenti in eleifend quam a odio tempor hendrerit.",
+                "Vivamus luctus urna sed urna ultricies ac tempor dui sagittis.",
+                "Praesent nec nisl a purus blandit viverra donec vel arcu.",
+                "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices."
+            ],
+            danish: [
+                "Den hurtige brune ræv springer over den dovne hund.",
+                "Hygge er en dansk tradition der værdsættes verden over.",
+                "København er Danmarks hovedstad og største by.",
+                "Smørrebrød er en klassisk dansk frokostret med rugbrød.",
+                "Vikingerne var kendte for deres søfart og handelsruter.",
+                "Den lille havfrue sidder ved Langelinie i København.",
+                "Tivoli er en af verdens ældste forlystelsesparker.",
+                "Danske design er kendt for sit minimalistiske udtryk.",
+                "Vinteren i Danmark kan være lang og grå, men hyggen hjælper.",
+                "Rødgrød med fløde er svært at udtale for udlændinge.",
+                "Cykelkultur er en stor del af dansk infrastruktur.",
+                "Frederiksborg Slot er et af Nordeuropas flotteste renæssanceslotte.",
+                "Danske folkehøjskoler tilbyder livslang læring uden eksaminer.",
+                "Julen i Danmark fejres med risalamande og nisser.",
+                "Skagen er kendt for sit unikke lys og kunstnerkoloni.",
+                "Lakrids og salmiak er populære danske smagsvarianter.",
+                "Den danske flexicurity-model kombinerer jobfleksibilitet med social sikkerhed.",
+                "Legoland i Billund er bygget af millioner af legoklodser."
+            ],
+            hipster: [
+                "Artisan craft beer synth, aesthetic chambray ironic typewriter.",
+                "Williamsburg selvage vinyl, enamel pin kombucha direct trade.",
+                "Sustainable kale chips microdosing, cold-pressed green juice ethical.",
+                "Authentic portland fixie, slow-carb hexagon wayfarers distillery.",
+                "Retro farm-to-table cronut, gastropub kinfolk narwhal aesthetic.",
+                "Vexillologist raw denim edison bulb, messenger bag tousled tumeric.",
+                "Brooklyn intelligentsia air plant, humblebrag cloud bread ethical.",
+                "Meditation tacos flexitarian, asymmetrical skateboard trust fund.",
+                "Biodiesel literally bushwick, banjo tumblr celiac four loko.",
+                "Listicle hashtag organic, poke tattooed edison bulb helvetica.",
+                "Skateboard marfa coloring book, mlkshk pork belly gentrify.",
+                "Chia mustache synth, keffiyeh normcore shabby chic echo park."
+            ],
+            bacon: [
+                "Bacon ipsum dolor amet ribeye hamburger chuck venison bresaola.",
+                "Spare ribs pig pork chop, prosciutto landjaeger boudin beef.",
+                "Tenderloin cupim porchetta, jerky alcatra meatball fatback brisket.",
+                "Sirloin ham hock pancetta, sausage kevin drumstick frankfurter.",
+                "Corned beef burgdoggen pastrami, short ribs salami shankle tri-tip.",
+                "Meatloaf rump tongue, pork belly flank ball tip ground round.",
+                "Kielbasa picanha jowl, turducken capicola chuck leberkas bacon.",
+                "Andouille shoulder swine, ham tongue t-bone prosciutto bresaola.",
+                "Strip steak filet mignon tail, frankfurter ham biltong venison.",
+                "Pork loin buffalo pig, beef ribs short loin doner capicola."
+            ],
+            cat: [
+                "Kat sidder i vinduet og stirrer på fuglene hele dagen.",
+                "Miau miau, jeg vil have mad nu, menneske.",
+                "Vælter glasset fra bordet, ser uskyldigt på dig bagefter.",
+                "Sover 18 timer om dagen, det er et hårdt katteliv.",
+                "Ignorerer den dyre legetøj, leger med papkassen i stedet.",
+                "Løber rundt klokken tre om natten af ingen grund.",
+                "Sidder på tastaturet præcis når du skal arbejde.",
+                "Ælter puden i ti minutter før den endelige søvnposition.",
+                "Bringer døde mus som gave, forstår ikke manglen på begejstring.",
+                "Stirrer intenst på væggen, ser noget mennesker ikke kan se.",
+                "Kradser på møblerne selvom der er et kradsetræ.",
+                "Vrænger af maden først, spiser den alligevel bagefter."
+            ],
+            corporate: [
+                "Vi skal synergisere vores kernekompetencer for maksimal værditilvækst.",
+                "Lad os tage dette offline og circle back med stakeholders.",
+                "Det er vigtigt at tænke out of the box og være agile.",
+                "Vi skal pivot strategi og double down på vores USP.",
+                "Vores value proposition driver sustainable growth i markedet.",
+                "Dette er et paradigmeskift i vores go-to-market approach.",
+                "Vi skal leverage vores assets for at opnå market fit.",
+                "Synergien mellem teams skaber holistic transformation.",
+                "ROI på denne initiative vil disrupte industrien.",
+                "Vi skal onboarde nye talenter til vores ecosystem.",
+                "Vores roadmap sikrer alignment på tværs af vertikaler.",
+                "Med dette framework kan vi scale med minimal friction."
+            ]
+        };
+
+        const headings = {
+            lorem: ["De finibus bonorum", "Cicero dixit", "Philosophia prima"],
+            danish: ["Introduktion", "Hovedpunkter", "Konklusion", "Overblik"],
+            hipster: ["The Aesthetic", "Urban Living", "Craft & Culture"],
+            bacon: ["Premium Meats", "Grill Masters", "BBQ Essentials"],
+            cat: ["Kattens Dag", "Sovepladser", "Jagttid"],
+            corporate: ["Strategisk Vision", "Markedsanalyse", "Implementering"]
+        };
+
+        // DOM elements
+        const textType = document.getElementById('textType');
+        const unitType = document.getElementById('unitType');
+        const amount = document.getElementById('amount');
+        const startLorem = document.getElementById('startLorem');
+        const includeHeadings = document.getElementById('includeHeadings');
+        const generateBtn = document.getElementById('generateBtn');
+        const copyBtn = document.getElementById('copyBtn');
+        const output = document.getElementById('output');
+        const stats = document.getElementById('stats');
+        const themeToggle = document.getElementById('themeToggle');
+        const copyNotification = document.getElementById('copyNotification');
+
+        function shuffleArray(arr) {
+            const shuffled = [...arr];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            return shuffled;
+        }
+
+        function getRandomSentences(type, count) {
+            const sentences = texts[type];
+            const result = [];
+            for (let i = 0; i < count; i++) {
+                result.push(sentences[Math.floor(Math.random() * sentences.length)]);
+            }
+            return result;
+        }
+
+        function generateText() {
+            const type = textType.value;
+            const unit = unitType.value;
+            const count = Math.min(Math.max(parseInt(amount.value) || 1, 1), 50);
+            const useLoremStart = startLorem.checked && type === 'lorem';
+            const useHeadings = includeHeadings.checked;
+            
+            let result = '';
+            let plainText = '';
+
+            if (unit === 'paragraphs') {
+                for (let i = 0; i < count; i++) {
+                    if (useHeadings && i > 0 && i % 2 === 0) {
+                        const heading = headings[type][Math.floor(Math.random() * headings[type].length)];
+                        result += `<h3>${heading}</h3>`;
+                        plainText += heading + '\n\n';
+                    }
+                    
+                    const sentences = getRandomSentences(type, 4 + Math.floor(Math.random() * 3));
+                    if (useLoremStart && i === 0) {
+                        sentences[0] = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+                    }
+                    const para = sentences.join(' ');
+                    result += `<p>${para}</p>`;
+                    plainText += para + '\n\n';
+                }
+            } else if (unit === 'sentences') {
+                const sentences = getRandomSentences(type, count);
+                if (useLoremStart) {
+                    sentences[0] = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+                }
+                result = `<p>${sentences.join(' ')}</p>`;
+                plainText = sentences.join(' ');
+            } else if (unit === 'words') {
+                const allSentences = getRandomSentences(type, Math.ceil(count / 5));
+                const words = allSentences.join(' ').split(' ');
+                if (useLoremStart) {
+                    words.splice(0, 2, 'Lorem', 'ipsum');
+                }
+                const selectedWords = words.slice(0, count);
+                // Capitalize first word and add period
+                selectedWords[0] = selectedWords[0].charAt(0).toUpperCase() + selectedWords[0].slice(1);
+                let text = selectedWords.join(' ');
+                if (!text.endsWith('.')) text += '.';
+                result = `<p>${text}</p>`;
+                plainText = text;
+            } else if (unit === 'lists') {
+                for (let i = 0; i < count; i++) {
+                    const items = getRandomSentences(type, 3 + Math.floor(Math.random() * 3));
+                    result += '<ul>';
+                    items.forEach(item => {
+                        result += `<li>${item}</li>`;
+                        plainText += '• ' + item + '\n';
+                    });
+                    result += '</ul>';
+                    plainText += '\n';
+                }
+            }
+
+            output.innerHTML = result;
+            
+            // Update stats
+            const wordCount = plainText.trim().split(/\s+/).filter(w => w).length;
+            const charCount = plainText.replace(/\s/g, '').length;
+            stats.textContent = `${wordCount.toLocaleString('da-DK')} ord · ${charCount.toLocaleString('da-DK')} tegn`;
+        }
+
+        function copyToClipboard() {
+            const text = output.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                copyNotification.classList.add('show');
+                setTimeout(() => copyNotification.classList.remove('show'), 2000);
+            });
+        }
+
+        // Event listeners
+        generateBtn.addEventListener('click', generateText);
+        copyBtn.addEventListener('click', copyToClipboard);
+
+        themeToggle.addEventListener('click', () => {
+            const isLight = document.body.hasAttribute('data-theme');
+            if (isLight) {
+                document.body.removeAttribute('data-theme');
+                themeToggle.textContent = '🌙';
+            } else {
+                document.body.setAttribute('data-theme', 'light');
+                themeToggle.textContent = '☀️';
+            }
+            localStorage.setItem('theme', isLight ? 'dark' : 'light');
+        });
+
+        // Keyboard shortcut
+        document.addEventListener('keydown', (e) => {
+            if (e.code === 'Space' && !['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) {
+                e.preventDefault();
+                generateText();
+            }
+        });
+
+        // Init
+        if (localStorage.getItem('theme') === 'light') {
+            document.body.setAttribute('data-theme', 'light');
+            themeToggle.textContent = '☀️';
+        }
+        
+        generateText();
+    </script>
+</body>
+</html>
